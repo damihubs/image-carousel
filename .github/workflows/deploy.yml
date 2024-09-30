@@ -16,7 +16,7 @@ jobs:
     - name: Deploy to Azure Static Web App
       uses: Azure/static-web-apps-deploy@v1
       with:
-        azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_NEW }}
-        app_location: "/"  # Location of static files in the root directory
-        output_location: "/"  # Output is in the root directory
-        skip_app_build: true  # Skip Oryx build process as this is a static site
+        azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_NEW }}  # Ensure correct secret
+        app_location: "/"  # Static files location (root directory)
+        output_location: "/"  # Output directory
+        skip_app_build: true  # Skips build process for static site

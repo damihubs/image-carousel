@@ -24,11 +24,11 @@ jobs:
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_PURPLE_CLIFF_01A54001E }}
-          repo_token: ${{ secrets.GITHUB_TOKEN }}  # GitHub integration token
-          app_location: "/"  # Location of your static files
-          api_location: ""  # Leave empty if you have no API
-          output_location: "."  # Location of the built content
-          skip_app_build: true  # Skipping build since it's a static site
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          app_location: "/"  # Path to static files
+          api_location: ""  # Leave empty if no API
+          output_location: "."  # Where the static files are built or located
+          skip_app_build: true  # Skipping build process for static site
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'

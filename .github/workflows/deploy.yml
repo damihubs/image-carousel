@@ -20,3 +20,4 @@ jobs:
         app_location: "/"  # Static files location (root directory)
         output_location: "/"  # Output directory
         skip_app_build: true  # Skips build process for static site
+        action: "upload"  # Specify the deployment action
